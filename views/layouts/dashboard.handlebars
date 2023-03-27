@@ -3,12 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Tech Blog</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>The Tech Blog - MVC</title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
@@ -16,7 +12,7 @@
       <ul style="display: flex; flex-wrap: wrap;">
         <li><a href="/">Home</a></li>
         <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="#" id="logout">Logout</a></li>
+        <li><a href="#" id="logout">Log Out</a></li>
       </ul>
     </nav>
     <header>
@@ -31,12 +27,12 @@
       style="display: flex; flex-wrap: wrap; justify-content: center;
 "
     >
-      <a href="/dashboard/new-post">+ New Post</a>
+      <a href="/dashboard/create">+ New Post</a>
     </footer>
   </body>
 
-  <script src="/javascript/logout.js"></script>
-  <script src="/javascript/update.js"></script>
-  <script src="/javascript/delete.js"></script>
+  <script src="/js/user/logout.js"></script>
+  <script src="/js/post/update.js"></script>
+  <script src="/js/post/delete.js"></script>
 
 </html>

@@ -1,0 +1,22 @@
+<div class="posts">
+  {{#each posts}}
+    <article class="container">
+      <div
+        class="container-header"
+        style=" display: flex; flex-wrap: wrap; justify-content: space-between;"
+      >
+        <h2>
+          <a href="/post/{{id}}">{{title}}</a>
+        </h2>
+        <div>
+          Posted By
+          {{User.username}}
+          {{format_date createdAt}}
+        </div>
+      </div>
+      <div class="container-body">
+        {{body}}
+      </div>
+    </article>
+  {{/each}}
+</div>

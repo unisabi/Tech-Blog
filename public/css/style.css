@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #f0b4f3;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  line-height: 1.5;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0px;
+  color: #231111;
+}
+
+h2 a {
+  color: #f0b4f3;
+}
+
+main {
+  margin: 20px auto;
+  width: 94%;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #fefefe;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: #a63fa8;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 13px;
+}
+
+nav ul li a {
+  color: #f6f2f5;
+}
+
+header {
+  margin-top: 20px;
+  padding: 3% 4%;
+  background-color: #211123;
+  color: #f0b4f3;
+}
+
+header p {
+  max-width: 75%;
+}
+
+header h1 {
+  font-size: 3rem;
+  background-color: #f0b4f3;
+  color: #650a71;
+  padding: 0 10px;
+  display: inline-block;
+  box-shadow: 6px 5px #666869;
+}
+
+header h1 a {
+  color: #650a71;
+}
+
+footer a {
+  display: inline-block;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  background-color: #650a71;
+  color: #f0b4f3;
+
+  text-decoration: none;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  margin: 0 0 20px 0;
+  border: 3px solid #650a71;
+}
+
+.container-header {
+  color: #f0b4f3;
+  background-color: #650a71;
+  padding: 1%;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.container-header h2 {
+  color: #f0b4f3;
+}
+
+.container-body {
+  padding: 1%;
+}
+
+.form-label,
+.form-input,
+.form-textarea {
+  display: block;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  margin: 0 0 0 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1%;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  border: 2px solid #666869;
+}
+
+.blog-group {
+  padding: 1%;
+}
+
+.blog-group-item {
+  margin-bottom: 10px;
+  padding: 1.5%;
+
+  background-color: #666869;
+  color: #f0b4f3;
+  text-decoration: none;
+}
+
+.blog-group-item:hover {
+  background-color: #650a71;
+}
+
+.btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 6px 5px;
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+  color: #f0b4f3;
+  border: none;
+  outline: none;
+  background-color: #650a71;
+}
+
+.btn:hover {
+  background: #330e2d;
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}

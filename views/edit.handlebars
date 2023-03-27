@@ -1,0 +1,47 @@
+<div class="post container">
+  <div class="container-header">
+    <h2>Edit Post</h2>
+  </div>
+  <form id="edit-post" class="container-body">
+    <input type="hidden" id="post-id" value="{{post.id}}" />
+    <label class="form-label" for="postTitle">Title</label>
+    <input
+      type="text"
+      id="post-title"
+      value="{{post.title}}"
+      class="form-input"
+    />
+    <label class="form-label" for="postContent">Content</label>
+    <textarea id="post-content" class="form-input">{{post.body}}</textarea>
+    <button type="submit" class="btn">Update Post</button>
+    <button type="button" id="delete-post" class="btn">Delete</button>
+  </form>
+</div>
+
+{{#with "edit-post"}}
+  <script>
+    document.addEventListener("DOMContentLoaded", () => { const form =
+    document.getElementById("{{this}}"); const editPost = async (event) => {
+    event.preventDefault(); const title =
+    document.getElementById("post-title").value; const body =
+    document.getElementById("post-content").value; const postId =
+    document.getElementById("post-id").value; fetch(`/api/post/${postId}`, {
+    method: "put", body: JSON.stringify({ title, body }), headers: {
+    "Content-Type": "application/json", }, }) .then(() => {
+    document.location.replace("/dashboard"); }) .catch((err) =>
+    console.log(err)); }; form.addEventListener("submit", editPost); });
+  </script>
+{{/with}}
+
+{{#with "delete-post"}}
+  <script>
+    const deletePost = async (event) => { console.log("clicked", event);
+    event.preventDefault(); const postId =
+    document.getElementById("post-id").value; fetch(`/api/post/${postId}`, {
+    method: "delete", }) .then(() => { document.location.replace("/dashboard");
+    }) .catch((err) => console.log(err)); };
+    document.getElementById("delete-post").addEventListener("click",
+    deletePost);
+
+  </script>
+{{/with}}

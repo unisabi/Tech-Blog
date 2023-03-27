@@ -1,0 +1,12 @@
+<div class="posts blog-group">
+  {{#each posts}}
+    <a
+      class="blog-group-item"
+      style=" display: flex; flex-wrap: wrap; justify-content: space-between;"
+      href="/dashboard/edit/{{id}}"
+    >
+      <span>{{title}}</span>
+      <span>{{format_date createdAt}}</span>
+    </a>
+  {{/each}}
+</div>
