@@ -51,7 +51,7 @@ app.use("/api/comment", commentRoutes);
 
 try {
   sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log(`running in port :- ${PORT}!`));
+    app.listen(PORT, () => console.log(`running in port :- http://localhost:${PORT}!`));
   });
 } catch (err) {
   console.error("cannot connect to database", err);
